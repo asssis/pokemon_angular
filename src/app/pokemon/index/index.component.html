@@ -1,0 +1,26 @@
+<img src="/assets/img/pokemon-fundo.png" class="fundo">
+
+<div class="container aligner-right reverse-collum-mobile">
+    <div class="search">
+        <input type="text" placeholder="Consultar Pokemon" [(ngModel)]="filter"><button (click)="onSearch()">BUSCAR</button>
+    </div>
+
+    <img src="/assets/img/pokemon-logo.png" class="logo">
+</div>
+
+<div class="grid-container">
+    <app-card class="card rotate-in" *ngFor="let pokemon of pokemons" id="{{pokemon.id}}" img="{{pokemon.images.large}}"></app-card>
+</div>
+
+<div class="paginate" *ngIf="paginate">
+    <button (click)="clickPage(1)" *ngIf="page > 1">Primeiro</button>
+    <button (click)="clickPage(page - 1)" *ngIf="page > 1">Anterior</button>
+    <button (click)="clickPage(page - 2)" *ngIf="page > 2">{{page - 2}}</button>
+    <button (click)="clickPage(page - 1)" *ngIf="page > 1">{{page - 1}}</button>
+    <button class="active">{{page}}</button>
+    <button (click)="clickPage(page + 1)" *ngIf="totalPage > (page + 1)">{{page + 1}}</button>
+    <button (click)="clickPage(page + 2)" *ngIf="totalPage > (page + 2)">{{page + 2}}</button>
+    <button (click)="clickPage(page + 1)" *ngIf="totalPage > page">Próximo</button>
+    <button (click)="clickPage(totalPage)" *ngIf="totalPage > page">Último</button>
+</div>
+

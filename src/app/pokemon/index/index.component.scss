@@ -1,0 +1,98 @@
+$secundary: #3663ad;
+$primary: #ffcc3d;
+
+  .rotate-in {
+    opacity: 0;
+    animation: rotate 500ms linear;
+    animation-fill-mode: forwards;
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * 50ms;
+      }
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+    display: none;
+      transform: rotateY(470deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+      opacity: 1;
+    }
+  }
+
+  .paginate{
+    opacity: 0;
+    animation: fade-in 1000ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  .card{
+    border: 1px solid #333;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border-radius: 4px;
+  }
+
+  .card:hover{
+    cursor: pointer;
+    transform: scale(1.1)!important;
+  }
+
+
+  .grid-container{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+  }
+  .search{
+    flex: auto;
+    margin-top: 70px;
+    display: flex;
+    height: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .search>input{
+    background-color: transparent;
+    color: #333;
+    outline: none;
+    outline-style: none;
+    outline-offset: 0;
+    border: solid $secundary 1px;
+    padding: 5px;
+    border-radius: 3px 0px 0px 18px;
+    font-size: 20px;
+    display: flex;
+    float: left;
+  }
+  .search>button{
+    height: 100%;
+    width: 100px;
+    border-radius: 0px 18px 3px 0px;
+    outline: none;
+    background: $secundary;
+    color: $primary;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+  }
+
+  .search>button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+

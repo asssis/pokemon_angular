@@ -1,6 +1,6 @@
 import { inject, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { IndexComponent } from './index.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,15 +9,20 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        IndexComponent
       ],
     }).compileComponents();
   });
 
-  it('check title', () => {
-    inject([AppComponent], (app: AppComponent) => {
-    expect(app.title).toEqual('Pokemon');
+  it('check variaveis', () => {
+    inject([IndexComponent], (app: IndexComponent) => {
+    expect(app.pageSize).toEqual(60);
     })
   });
 
+  it('check service pokemon', () => {
+    inject([IndexComponent], (app: IndexComponent) => {
+    expect(app.CarregarDados()).isNot
+    })
+  });
 });
