@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../service/pokemon.service';
 import { Pokemon } from '../../models/pokemon';
+import * as AOS from 'aos';
 
 import { Observable } from 'rxjs';
 
@@ -35,6 +36,14 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.CarregarDados();
+      AOS.init(
+        {
+          offset: 200,
+          duration: 600,
+          easing: 'ease-in-sine',
+          delay: 100,
+        }
+      );
   }
 
   CarregarDados(){
