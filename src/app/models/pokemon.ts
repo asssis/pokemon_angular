@@ -5,4 +5,5 @@ export interface Pokemon {
     images: any;
     attacks: any;
     weaknesses: any;
+    resistances: any;
 }

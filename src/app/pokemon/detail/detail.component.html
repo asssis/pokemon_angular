@@ -1,38 +1,52 @@
 <img src="/assets/img/pokemon-fundo.png" class="fundo">
 
 <div class="container aligner-right">
-    <img src="/assets/img/pokemon-logo.png" class="logo">
+    <img src="/assets/img/pokemon-logo.png" data-aos="fade-right" class="logo">
 </div>
 <div class="container center-item">
-    <h1 class="name-pokemon dg-yelow-red font-large">{{pokemon.name}}</h1>
+    <h1 class="name-pokemon dg-yelow-red font-large" data-aos="zoom-out-down">{{pokemon.name}}</h1>
+</div>
+<div class="container center-item">
+    <img class="img-large" data-aos="flip-left" src="{{pokemon.images.large}}">
 </div>
 
 <div class="container">
-    <img src="/assets/img/power.png" class="col-md-2 mg-dr-2 mobile-hidden">
+    <img src="/assets/img/power.png" data-aos="zoom-out-down" class="col-md-2 mg-dr-2 mobile-hidden">
     <div class="col-md-6 mobile-full">
-        <h1 class="dg-blue-yelow dg-yelow-red font-large">Atacks</h1>
-        <img src="/assets/img/power.png" class="col-md-2 img-mobile">
+        <h1 class="dg-blue-yelow dg-yelow-red font-large" data-aos="flip-right">Atacks</h1>
+        <img src="/assets/img/power.png" data-aos="zoom-out-down" class="col-md-2 img-mobile">
         <div  *ngFor="let attack of pokemon.attacks">
-            <h3 class="dg-yelow-red dg-yelow-red font-small">{{attack.name}}: {{attack.damage}}</h3>
-            <h3 class="dg-yelow-red font-small">{{attack.text}}</h3>
+            <h3 class="dg-yelow-red dg-yelow-red font-small"  data-aos="zoom-out-down">{{attack.name}}: {{attack.damage}}</h3>
+            <h3 class="dg-yelow-red font-small"  data-aos="zoom-out-down">{{attack.text}}</h3>
         </div>
     </div>
 </div>
-
 
 <div class="container">
     <div class="col-md-6  mg-dr-2">
-        <h1 class="dg-blue-yelow dg-yelow-red font-large">Weaknesses</h1>
-        <div  *ngFor="let weaknesse of pokemon.weaknesses">
-            <h3 class="dg-yelow-red font-small">{{weaknesse.type}}: {{weaknesse.value}}</h3>
+        <h1 class="dg-blue-yelow dg-yelow-red font-large" data-aos="flip-left">Resistances</h1>
+        <div  *ngFor="let resistance of pokemon.resistances">
+            <h3  data-aos="zoom-out-left" class="dg-yelow-red font-small">{{resistance.type}}: {{resistance.value}}</h3>
         </div>
     </div>
     <div class="col-md-2 mobile-hidden bottom-alingner">
-        <img class="weaknesses " src="/assets/img/fraquesa.png">
+        <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="weaknesses " src="/assets/img/resistance.png">
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-6  mg-dr-2">
+        <h1 class="dg-blue-yelow dg-yelow-red font-large" data-aos="flip-left">Weaknesses</h1>
+        <div  *ngFor="let weaknesse of pokemon.weaknesses">
+            <h3  data-aos="zoom-out-left" class="dg-yelow-red font-small">{{weaknesse.type}}: {{weaknesse.value}}</h3>
+        </div>
+    </div>
+    <div class="col-md-2 mobile-hidden bottom-alingner">
+        <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="weaknesses " src="/assets/img/fraquesa.png">
     </div>
 </div>
 
 
 <div class="container">
-    <img class="weaknesses img-mobile img-full-mobile" src="/assets/img/fraquesa.png">
+    <img data-aos="zoom-out-right"  data-aos-anchor-placement="top-center" class="weaknesses img-mobile img-full-mobile" src="/assets/img/fraquesa.png">
 </div>
