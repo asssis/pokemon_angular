@@ -8,6 +8,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
 
+## Objetivo
+
+* Consultar a api "https://api.pokemontcg.io/v2/"
+* Fazer apresentação dos cards
+* Usar HTML e CSS puro
+* Fazer responsivo
+
 ## Rodar o Projeto
 
 * instalar o docker
