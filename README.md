@@ -3,7 +3,7 @@
 # AppPokemon
 
 ## Hospedagem
-* http://34.130.144.75:8080/
+* http://34.122.79.117:8080/
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
